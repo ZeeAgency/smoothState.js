@@ -674,7 +674,6 @@
          * @param   {object}    event
          */
         bindEventHandlers = function ($element) {
-
           if (options.anchors) {
             $element.on('click', options.anchors, clickAnchor);
             if (options.prefetch) {
@@ -710,7 +709,7 @@
       utility.triggerAllAnimationEndEvent($container, 'ss.onStartEnd ss.onProgressEnd ss.onEndEnd');
 
       /** Bind all of the event handlers on the container, not anchors */
-      bindEventHandlers($container);
+      bindEventHandlers($('body'));
 
       /** Public methods */
       return {
